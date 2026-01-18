@@ -10,7 +10,15 @@ interface HeroProps {
   imageSrc: string;
 }
 
-export default function Hero({ name, role, description, email, github, linkedin, imageSrc }: HeroProps) {
+export default function Hero({
+  name,
+  role,
+  description,
+  email,
+  github,
+  linkedin,
+  imageSrc,
+}: HeroProps) {
   return (
     <section className="w-full py-16 px-4">
       <div className="max-w-4xl mx-auto">
