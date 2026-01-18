@@ -8,9 +8,10 @@ export default function Home() {
           name="Bar Bibi"
           role="Computer Science Student & Software Developer"
           description="Building innovative solutions through code and creativity."
-          email="your.email@example.com"
-          github="https://github.com/yourusername"
-          linkedin="https://linkedin.com/in/yourusername"
+          email="barbibi7556@gmail.com"
+          github="https://github.com/BarBibi"
+          linkedin="https://www.linkedin.com/in/bar-bibi-computer-science"
+          imageSrc="/ProfilePicture.jpg"
         />
       </main>
     </div>

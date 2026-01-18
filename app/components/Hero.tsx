@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface HeroProps {
   name: string;
   role: string;
@@ -5,21 +7,35 @@ interface HeroProps {
   email: string;
   github: string;
   linkedin: string;
+  imageSrc: string;
 }
 
-export default function Hero({ name, role, description, email, github, linkedin }: HeroProps) {
+export default function Hero({ name, role, description, email, github, linkedin, imageSrc }: HeroProps) {
   return (
     <section className="w-full py-16 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-          {name}
-        </h1>
-        <h2 className="text-xl md:text-2xl text-foreground/80 mb-6">
-          {role}
-        </h2>
-        <p className="text-lg md:text-xl text-foreground/70 mb-8 max-w-2xl mx-auto">
-          {description}
-        </p>
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-8">
+          <div className="flex justify-center mb-6">
+            <Image
+              src={imageSrc}
+              alt={`${name} profile picture`}
+              width={150}
+              height={150}
+              className="rounded-full object-cover aspect-square"
+            />
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            {name}
+          </h1>
+          <h2 className="text-xl md:text-2xl text-foreground/80 mb-6">
+            {role}
+          </h2>
+        </div>
+        <div className="mb-8">
+          <p className="text-lg md:text-xl text-foreground/70 text-center max-w-2xl mx-auto">
+            {description}
+          </p>
+        </div>
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href={`mailto:${email}`}
